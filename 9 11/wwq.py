@@ -14,11 +14,8 @@ class Student:
         if (birthdate_dt > datetime.datetime.now)():
             raise ValueError("Birthdate cannot be in the future")
 
-        # Check if height is not an int or float
         if (not isinstance(height, (int, float))):
             raise TypeError(f"Height must be an int or float. Not a '{type(height)}'")
-
-        # Check if height is less than or equal to zero
         if (height <= 0):
             raise ValueError("Height must be greater than zero")
 
